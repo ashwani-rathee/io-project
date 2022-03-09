@@ -1,0 +1,7 @@
+name = "exifviewer"
+uuid = "7c7433bf-730b-4fc9-835a-1007e4f5cff3"
+authors = ["Ashwani Rathee <ab669522@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+libexif_jll = "cdeeb48b-bcdf-5b3f-98c4-7a29487f695f"

@@ -1,0 +1,4 @@
+name = "jpeg2000wrapper"
+uuid = "40a3d87f-54bd-4f0f-863a-9ecd0c0e3ec4"
+authors = ["Ashwani Rathee <ab669522@gmail.com>"]
+version = "0.1.0"
