@@ -2,3 +2,6 @@ name = "gifwrapper"
 uuid = "bc1bc4c6-68bb-4783-9eec-0bf9894ce9ef"
 authors = ["Ashwani Rathee <ab669522@gmail.com>"]
 version = "0.1.0"
+
+[deps]
+Giflib_jll = "59f7168a-df46-5410-90c8-f2779963d0ec"
