@@ -39,11 +39,16 @@ gif2rgb: RGB image:     out.gif
 This place holds code for extra utils provided by giflib in form of shared object library for use in Julia. Intention is to create a jll through this and maintain it. The code in them makes it easier to handle gif conversion to rgb and vice versa a lot easier
 
 - `gifwrapper/gen/libgifextra/notes`
+  
 Holds code for my tests in c
 
 - `gifwrapper/gen/libgifextratest.jl`
+  
 Holds code for usage of shared library in julia
 
+- `gifwrapper/lib/LibGif.jl`
+  
+Clang.jl wrapper of giflib
 Issues that need to be figured out:
 - How to make jll
 - Multi image write error
