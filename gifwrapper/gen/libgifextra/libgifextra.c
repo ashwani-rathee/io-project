@@ -446,3 +446,28 @@ void RGB2GIF(bool OneFileFlag, int NumFiles, char *FileName, char *InFileName,
 
     SaveGif(FileName, OutputBuffer, Width, Height, ExpNumOfColors, OutputColorMap);
 }
+
+GifFileType* returnGIF(char *FileName)
+{
+    int Error;
+    GifFileType* gif = DGifOpenFileName(FileName, &Error);
+
+    if (gif == NULL) {
+        printf("Failed to open .gif, return error with type \n");
+        // return false;
+    }
+
+    int slurpReturn = DGifSlurp(gif);
+    if (slurpReturn != GIF_OK) {
+        printf("Failed to read .gif file");
+        // return false;
+    }
+
+    // printf("Opened .gif with width/height =\n");
+    // printf("Width: %d \n",(int) gif->SWidth);
+    // printf("Height: %d \n",(int) gif->SHeight);
+    // for(int i = 0; i < 265*199; ++i){
+    //     printf("Data: %d \n", (int) gif->SavedImages[0].RasterBits[i]);
+    // }
+    return gif;
+}

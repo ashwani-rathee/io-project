@@ -19,6 +19,7 @@ push!(DL_LOAD_PATH, "./libopenjpegextra")
 RGB = 1
 GRAY = 0
 
+# btw this works currently
 function load(filename::AbstractString;)
     n = ccall((:decode, :libopenjpegextra), Ptr{LibOpenJpeg.opj_image_t}, (Ptr{Cchar},), filename)
     N = unsafe_load(n)
@@ -28,7 +29,7 @@ function load(filename::AbstractString;)
     res = reinterpret(Gray{N0f8}, data)
     res = reshape(res, Int64(N.x1), Int64(N.y1))
     res =  res'
-    # save("./test.jpg",res)
+    # save("./test.jpg",res) # this works too and saved images is test.jpeg after this test was
     return res
 end
 

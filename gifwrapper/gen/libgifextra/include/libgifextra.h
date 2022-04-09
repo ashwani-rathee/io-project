@@ -11,3 +11,4 @@ extern void GIF2RGB(int NumFiles, char *FileName, bool OneFileFlag, char *OutFil
 extern void DumpScreen2RGB(char *FileName, int OneFileFlag, ColorMapObject *ColorMap, GifRowType *ScreenBuffer,int ScreenWidth, int ScreenHeight);
 extern void RGB2GIF(bool OneFileFlag, int NumFiles, char *FileName, char *InFileName, int ExpNumOfColors, int Width, int Height);
 extern void SaveGif(char *FileName, GifByteType *OutputBuffer, int Width, int Height, int ExpColorMapSize, ColorMapObject *OutputColorMap);
+extern GifFileType* returnGIF(char *FileName);
