@@ -20,9 +20,14 @@ int main(){
     // GIF2RGB(NumFiles, FileName, OneFileFlag, OutFileName);
 
     // RGB GIF
-    char *FileName = "out.rgb";
-    bool OneFileFlag = false;
-    int Width = 1008, Height = 863, NumFiles = 1, ExpNumOfColors = 4;
-    RGB2GIF(OneFileFlag, NumFiles, FileName, ExpNumOfColors, Width, Height);
+    // char *FileName = "porsche.rgb";
+    // char *OutFileName = "Nasa-logo1.gif";
+    // bool OneFileFlag = false;
+    // int Width = 1008, Height = 863, NumFiles = 1, ExpNumOfColors = 4;
+    // RGB2GIF(OneFileFlag, NumFiles, OutFileName, FileName, ExpNumOfColors, Width, Height);
+
+    char *FileName = "Nasa-logo.gif";
+    GifFileType *GifFile;
+    GifFile = returnGIF(FileName);
     return 0;
 }
