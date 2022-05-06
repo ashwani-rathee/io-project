@@ -34,6 +34,6 @@ endif
 
 install: libgifextra.a
 	install -d /workspace/destdir/lib/
-	install -m 644 libgifextra.a /workspace/destdir/lib/
+	install -m 644 libgifextra.so /workspace/destdir/lib/
 	install -d /workspace/destdir/include/
 	install -m 644 libgifextra.h /workspace/destdir/include/
