@@ -37,5 +37,3 @@ install: libgifextra.a
 	install -m 644 libgifextra.a /workspace/destdir/lib/
 	install -d /workspace/destdir/include/
 	install -m 644 libgifextra.h /workspace/destdir/include/
-
---
