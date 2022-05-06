@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-I./include -fPIC 
 DEPS = libgifextra.h 
-PREFIX = /usr/local
+PREFIX = /workspace/destdir
 
 all: libgifextra
 UNAME_S := $(shell uname -s)
@@ -33,7 +33,9 @@ ifeq ($(PREFIX),)
 endif
 
 install: libgifextra.a
-	install -d $(DESTDIR)$(PREFIX)/lib/
-	install -m 644 libgifextra.a $(DESTDIR)$(PREFIX)/lib/
-	install -d $(DESTDIR)$(PREFIX)/include/
-	install -m 644 libgifextra.h $(DESTDIR)$(PREFIX)/include/
+	install -d /workspace/destdir/lib/
+	install -m 644 libgifextra.a /workspace/destdir/lib/
+	install -d /workspace/destdir/include/
+	install -m 644 libgifextra.h /workspace/destdir/include/
+
+--
