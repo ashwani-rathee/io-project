@@ -32,7 +32,7 @@ ifeq ($(PREFIX),)
 	PREFIX := /usr/local
 endif
 
-install: libgifextra.a
+install: libgifextra.so
 	install -d /workspace/destdir/lib/
 	install -m 644 libgifextra.so /workspace/destdir/lib/
 	install -d /workspace/destdir/include/
